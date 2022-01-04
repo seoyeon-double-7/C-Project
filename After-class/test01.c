@@ -12,7 +12,7 @@ int main() {
 		if (n == 0) 
 			break;
 
-		else if(n % 2 == 1) {
+		else if(n % 2) {	//!(n % 2)
 			for (int i = 1; i < n; i++) 
 				if (i % 2 == 1)
 					sum += i;
