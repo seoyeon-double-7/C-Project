@@ -9,8 +9,7 @@ int main() {
 		printf("숫자 입력 : ");
 		scanf_s("%d", &n);
 			
-		if (n == 0) 
-			break;
+		if (!n) break;
 
 		else if(n % 2) {	//!(n % 2)
 			for (int i = 1; i < n; i++) 
@@ -22,4 +21,5 @@ int main() {
 		else
 			printf("%d\n", n * n * n);
 	}
+	return 0;
 }
