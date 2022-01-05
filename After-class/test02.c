@@ -1,10 +1,12 @@
+//제곱 출력하는 함수
+
 #include<stdio.h>
 
 int main() {
 	void jegop(int n);
 	int a;
 
-	printf("���� �Է� : ");
+	printf("¼ýÀÚ ÀÔ·Â : ");
 	scanf_s("%d", &a);
 	jegop(a);
 }
