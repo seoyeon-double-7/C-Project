@@ -1,4 +1,5 @@
 #include<stdio.h>
+#define _CRT_SECURE_NO_WARNINGS
 
 typedef struct _Person {
 	char name[20];
@@ -7,20 +8,24 @@ typedef struct _Person {
 } Person;
 
 int main() {
-	Person p1;
+	Person arr[3] = {"", 0, " "};
+	char n[2];
 
-	printf("이름 입력 : ");
-	gets(p1.name);
+	for (int i = 0; i < 3; i++) {
+		printf("이름 입력 : ");
+		gets(arr[i].name);
 
-	printf("전화번호 입력 : ");
-	gets(p1.phone_num);
+		printf("전화번호 입력 : ");
+		gets(arr[i].phone_num);
 
-	printf("나이 입력 : ");
-	scanf_s("%d", &p1.age);
+		printf("나이 입력 : ");
+		scanf_s("%d", &arr[i].age);
 
-	printf("이름: %s\n", p1.name);      
-	printf("전화번호: %s\n", p1.phone_num);        
-	printf("나이: %d\n", p1.age);
-
+		printf("이름: %s\n", arr[i].name);
+		printf("전화번호: %s\n", arr[i].phone_num);
+		printf("나이: %d\n", arr[i].age);
+		gets_s(n, 2);
+		}
+	
 	return 0;
 }
