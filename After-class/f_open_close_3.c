@@ -6,13 +6,14 @@ int main() {
 	
 
 	FILE *fp;
-	fp = fopen("a.txt","a+");
+	fp = fopen("a.txt","r+");
 	if (fp == NULL) puts("open file");
 
-	fgets(name, 15, stdin);
-//	fgets(tel, 15, stdin);
+	while( fgets(name, 15, fp) != NULL )
+		fputs(name, stdout);
+	
 
-	fputs(name, fp);
+//	fgets(tel, 15, stdin);
 //	fputs(tel, fp);
 
 	fclose(fp);
