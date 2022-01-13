@@ -1,13 +1,17 @@
 #include<stdio.h>
+
+typedef struct _Person {
+	char name[10];
+	char tel[15];
+} Person;
+
 int main() {
-	char name[15];
-	int tel[20];
+	Person a;
+	fgets(a.name, 15, stdin);
+	fgets(a.tel, 15, stdin);
 
-	fgets(name, 15, stdin);
-	fgets(tel, 15, stdin);
-
-	fputs(name, stdout);
-	fputs(tel, stdout);
+	fputs(a.name, stdout);
+	fputs(a.tel, stdout);
 
 	return 0;
 }
